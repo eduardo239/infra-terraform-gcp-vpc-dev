@@ -1,7 +1,6 @@
 variable "project_id" {
-  description = "The ID of the project where resources will be created."
+  description = "The ID of the project where resources will be created. Define via TF_VAR_project_id ou terraform.tfvars (não versionado)."
   type        = string
-  default     = "learn-gcp-terraform-469711"
 }
 variable "region" {
   description = "The region where resources will be created."
@@ -26,5 +25,10 @@ variable "vpc_name" {
   description = "The name of the VPC network to create."
   type        = string
   default     = "tf-vpc-network"
+}
 
+variable "vm_assign_public_ip" {
+  description = "Atribuir IP público à VM. Desabilitado por padrão por segurança (use apenas quando necessário)."
+  type        = bool
+  default     = false
 }

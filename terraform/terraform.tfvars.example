@@ -1,0 +1,8 @@
+# Copie para terraform.tfvars e preencha (terraform.tfvars não é versionado).
+# project_id é obrigatório; os demais têm defaults.
+
+project_id = "seu-projeto-gcp-id"
+# region     = "us-central1"
+# zone       = "us-central1-a"
+# vpc_name   = "tf-vpc-network"
+# vm_assign_public_ip = false  # true apenas se a VM precisar de IP público

@@ -1,9 +1,11 @@
-name: Terraform CI/CD
+name: Terraform Destroy
 
+# Execução apenas manual ou via tag, para evitar destruição acidental em push na main
 on:
+  workflow_dispatch:
   push:
-    branches:
-      - main
+    tags:
+      - 'destroy-*'
 
 jobs:
   terraform:
